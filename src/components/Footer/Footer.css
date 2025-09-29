@@ -1,0 +1,44 @@
+footer {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer .footer-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+footer .footer-info div {
+  margin-bottom: 20px;
+}
+
+footer .footer-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+footer .company-info,
+footer .contact-info {
+  text-align: left;
+}
+
+footer .company-info p,
+footer .contact-info p {
+  margin: 5px 0;
+}
+
+footer .copyright {
+  margin-top: 20px;
+  font-size: 0.8em;
+  color: #888;
+}

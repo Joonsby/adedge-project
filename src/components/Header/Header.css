@@ -1,0 +1,278 @@
+header {  
+  height: 60px;    
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eee;
+  background: #fff;
+}
+
+nav {  
+  display: flex;
+  text-align: center;  
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul {
+  justify-content: space-between;
+  align-items: center;  
+}
+
+nav ul li {
+  width: 100%;
+  line-height: 60px;  
+}
+
+nav ul li a {
+  position: relative;
+  color: #666;  
+  padding-bottom: 0px;
+}
+
+nav ul li:hover > a,
+#all-submenu ul li:hover > a {
+  color: #000;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: 10px;
+  width: 50%;
+  height: 3px;
+  background: rgb(0, 191, 99);
+  transform: translateX(-50%);  
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 280ms cubic-bezier(.2,.8,.2,1);
+}
+
+#all-submenu ul li a {
+  font-size: 14px;
+}
+
+#all-submenu ul li a::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  bottom: 10px;
+  width: 60%;
+  height: 3px;
+  background: rgb(0, 191, 99);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 280ms cubic-bezier(.2,.8,.2,1);
+}
+
+nav ul li:hover > a::after,
+#all-submenu ul li:hover > a::after {
+  transform: scaleX(1);
+}
+
+/* 숨겨진 메뉴 */
+#all-submenu {
+  top: 59px;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  text-align: center;  
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+
+#all-submenu div {
+  margin: 0 auto;  
+}
+
+#all-submenu ul li {
+  padding: 20px;
+  color: #666;
+}
+
+/* MY페이지, 로그인, 회원가입 메뉴 */
+#right-menu {  
+  width: 15%;
+  justify-content: space-between;
+}
+
+#right-menu li {
+  width: 100%;
+  text-align: center;
+}
+
+#right-menu li a {    
+  font-size: 12px;
+}
+
+#hamburger-menu {
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#hamburger-menu span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+}
+
+/* 사이드바 스타일 */
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+  transition: right 0.3s ease;
+  z-index: 9999;
+  padding-top: 0;
+}
+
+.sidebar-menu.active {
+  right: 0;
+}
+
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu ul li {
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.sidebar-toggle {
+  color: #333;
+  font-size: 18px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: none;
+}
+
+.sidebar-submenu {
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7;
+  transition: max-height 0.2s ease;
+}
+
+.sidebar-submenu li a {
+  font-size: 16px;
+  color: #333;
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar-item.active > .sidebar-submenu {
+  max-height: 500px;
+}
+
+.sidebar-item .arrow {
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.sidebar-item.active .arrow {
+  transform: rotate(180deg);
+}
+
+.sidebar-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-top: 1px solid #eee;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+.sidebar-login, .sidebar-signup {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #009651;
+  text-decoration: none;
+  font-weight: bold;
+  background: none;
+  border: none;
+  padding: 15px 0;
+}
+
+.sidebar-login {
+  border-right: 1px solid #eee;
+  width: 48%;
+  justify-content: flex-start;
+}
+
+.sidebar-signup {
+  width: 48%;
+  justify-content: flex-end;
+}
+
+.sidebar-icon {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.sidebar-signup .sidebar-icon {
+  margin-right: 8px;
+  color: #007034;
+}
+
+@media (max-width: 1024px) {
+  nav.dib {
+    display: none !important;
+  }
+  
+  #all-submenu,
+  #right-menu {
+    display: none !important;
+  }
+
+  #hamburger-menu {
+    display: flex;
+  }
+}
+
+@media (min-width: 1025px) {
+  #hamburger-menu {
+    display: none !important;
+  }
+  
+  nav,
+  #all-submenu,
+  #right-menu {
+    display: flex;
+  }
+
+  .sidebar-menu {
+    display: none;
+  }
+}

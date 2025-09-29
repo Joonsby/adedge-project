@@ -1,0 +1,19 @@
+#img-section {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+}
+
+#img-section h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#img-section p {
+  font-size: 1.2em;
+  color: #666;
+}

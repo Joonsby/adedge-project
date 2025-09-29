@@ -1,0 +1,149 @@
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.show {
+  display: block;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.por {
+  position: relative;
+}
+
+.poa {
+  position: absolute;
+}
+
+.pof {
+  position: fixed;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.width-80 {
+  width: 80%;
+}
+
+.width-70 {
+  width: 70%;
+}
+
+.width-60 {
+  width: 60%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-40 {
+  width: 40%;
+}
+
+.width-30 {
+  width: 30%;
+}
+
+.width-20 {
+  width: 20%;
+}
+
+.width-15 {
+  width: 15%;
+}
+
+.color-black {
+  color: black;
+}
+
+.color-white {
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;  
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  flex: 1;
+  padding-top: 60px;
+}
+
+/* 폰트 관련 */
+.font-bold {
+  font-weight: bold;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* flex 관련 */
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+/* display 관련 */
+.inline {
+  display: inline;
+}
+
+.block {
+  display: block;
+}
