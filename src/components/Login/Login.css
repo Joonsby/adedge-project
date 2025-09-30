@@ -1,58 +1,58 @@
 /* 로그인 페이지 스타일 */
 #login-section {
-  width: 600px;
-  margin: 100px auto;
-  padding: 40px;
-  border: none;
+  width: 600px; /* 박스 크기 증가 */
+  margin: 100px auto; /* 상하 margin 증가 */
+  padding: 40px; /* 패딩 증가 */
+  border: none; /* border 제거 */
   border-radius: 10px;
   text-align: center;
-  background: linear-gradient(to right, #009651, #007034);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9; /* 배경색 변경 */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
 }
 
 #login-section h2 {
-  margin-bottom: 40px;
-  color: #fff;
-  font-size: 2em;
-  font-weight: bold;
+  margin-bottom: 40px; /* 간격 증가 */
+  color: #333;
+  font-size: 2em; /* 폰트 크기 증가 */
+  font-weight: bold; /* 폰트 굵게 */
 }
 
 #login-section .form-group {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+  display: flex; /* label과 input을 나란히 배치 */
+  align-items: center; /* 수직 정렬 */
+  margin-bottom: 30px; /* 간격 증가 */
 }
 
 #login-section label {
   display: inline-block;
-  width: 120px;
-  text-align: right;
+  width: 120px; /* label의 너비 설정 */
+  text-align: right; /* label text 정렬 */
   margin-right: 20px;
-  color: #fff;
-  font-weight: bold;
+  color: #666;
+  font-weight: bold; /* label 폰트 굵게 */
 }
 
 #login-section input[type="text"],
 #login-section input[type="password"] {
-  width: 350px;
-  padding: 12px;
+  width: 350px; /* input box 너비 설정 */
+  padding: 12px; /* 패딩 증가 */
   border: 1px solid #ddd;
   border-radius: 5px;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 16px; /* 폰트 크기 증가 */
 }
 
 #login-section button {
-  background: linear-gradient(to right, #00bf63, #009651);
+  background: linear-gradient(to right, #00bf63, #009651); /* 최초 색상 */
   color: white;
-  padding: 15px 30px;
+  padding: 15px 30px; /* 버튼 크기 조정 */
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
+  font-size: 18px; /* 폰트 크기 조정 */
+  transition: background-color 0.3s ease; /* hover 효과 */
 }
 
 #login-section button:hover {
-  background: linear-gradient(to right, #009651, #007034);
+  background: linear-gradient(to right, #009651, #007034); /* hover 시 색상 */
 }

@@ -4,7 +4,7 @@ header {
   justify-content: space-between;
   align-items: center;
   border: 1px solid #eee;
-  background: #fff;
+  background: #fff;  
 }
 
 nav {  
@@ -49,8 +49,46 @@ nav ul li a::after {
   transition: transform 280ms cubic-bezier(.2,.8,.2,1);
 }
 
+nav ul li:hover > a::after,
+#all-submenu ul li:hover > a::after {
+  transform: scaleX(1);
+}
+
+/* 숨겨진 메뉴 */
+#all-submenu {
+  top: 59px;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  text-align: center;  
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+#all-submenu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#all-submenu div {
+  margin: 0 auto;  
+}
+
+#all-submenu ul li {  
+  color: #666;
+}
+
 #all-submenu ul li a {
-  font-size: 14px;
+  display:block;
+  padding:20px;
+  font-size: 12px;
 }
 
 #all-submenu ul li a::after {
@@ -66,34 +104,9 @@ nav ul li a::after {
   transition: transform 280ms cubic-bezier(.2,.8,.2,1);
 }
 
-nav ul li:hover > a::after,
-#all-submenu ul li:hover > a::after {
-  transform: scaleX(1);
-}
-
-/* 숨겨진 메뉴 */
-#all-submenu {
-  top: 59px;
-  left: 0;
-  width: 100%;
-  justify-content: center;
-  text-align: center;  
-  border-bottom: 1px solid #ccc;
-  background: #fff;
-}
-
-#all-submenu div {
-  margin: 0 auto;  
-}
-
-#all-submenu ul li {
-  padding: 20px;
-  color: #666;
-}
-
 /* MY페이지, 로그인, 회원가입 메뉴 */
 #right-menu {  
-  width: 15%;
+  width: 10%;
   justify-content: space-between;
 }
 
